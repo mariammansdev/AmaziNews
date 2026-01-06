@@ -4,6 +4,7 @@ import { customFetch } from '../utils';
 import CategorySelector from '../components/CategorySelector';
 import NewsList from '../components/NewsList';
 import { BsSunFill, BsMoonFill } from 'react-icons/bs';
+import Pagination from '../components/Pagination';
 
 const Home = () => {
     const getThemeFromLocalStorage = () => {
@@ -50,9 +51,9 @@ const Home = () => {
 
     return (
         <div className='min-h-screen bg-base-200'>
-            <header className='bg-primary text-primary-content p-4'>
+            <header className='bg-white text-primary content p-4'>
                 <div className='container mx-auto flex justify-between items-center'>
-                    <h1 className='text-3xl font-bold'>New Apps</h1>
+                    <h1 className='text-3xl font-bold'>Amazi News</h1>
                     <button
                         onClick={handleTheme}
                         className="btn btn-ghost btn-circle transition-transform"
@@ -78,6 +79,13 @@ const Home = () => {
             </main>
             {data && <div>
                 <NewsList news={data?.articles} />
+                {
+                    totalPages > 1 && (
+                    <div> 
+                        <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
+                    </div>
+                )
+                }
             </div>}
         </div>
     )

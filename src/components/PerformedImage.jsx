@@ -80,12 +80,12 @@ export default function PerformedImage({
             aria-hidden
             loading="lazy"
             decoding="async"
-            className={className ? className : clsx(
-              "absolute  h-full",
-              cover ? "object-cover" : "object-contain",
-              "filter blur-md scale-105"
+            // className={className ? className : clsx(
+            //   "absolute  h-full",
+            //   cover ? "object-cover" : "object-contain",
+            //   "filter blur-md scale-105"
 
-            )}
+            // )}
             onClick={onClick}
           />
         ) 
@@ -104,8 +104,9 @@ export default function PerformedImage({
           fetchpriority={eager ? "high" : "low"}
           onClick={onClick}
           className={clsx(
-            "absolute inset-0 w-full h-full",
-            cover ? "object-cover" : "object-contain",
+            // "absolute inset-0 w-full h-full",
+            cover ? "object-cover" : "object-contain"
+            ,
             (
               clsx(
                 "transition-opacity duration-300",
