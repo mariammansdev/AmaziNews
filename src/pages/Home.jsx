@@ -71,11 +71,18 @@ const Home = () => {
                     <CategorySelector category={category} onCategoryChange={onCategoryChange} />
                 </div>
                 <div className='flex justify-between items-center mt-8 border-b border-base-300 pb-5'>
-                    <h4 className='font-medium text-md'>
+                    <p className='font-medium text-md sg-stable'>
                         {totalResults} News
-                    </h4>
+                    </p>
                 </div>
-                {isLoading && <div>Loading...</div>}
+                {
+                    isLoading && (
+                        <div className='flex justify-center items-center h-64'>
+                            <span className='loading loading-spinner loading-lg'></span>
+                        </div>
+                    )
+                }
+                
             </main>
             {data && <div>
                 <NewsList news={data?.articles} />

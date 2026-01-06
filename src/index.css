@@ -2,3 +2,8 @@
 @plugin 'daisyui'{
     themes: fantasy, night
 }
+
+
+@utility sg-stable {
+  scrollbar-gutter: stable;
+}

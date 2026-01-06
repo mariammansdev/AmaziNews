@@ -90,7 +90,7 @@ export default function PerformedImage({
           />
         ) 
         : (
-          <div className="absolute inset-0  h-full bg-gray-300 animate-pulse" />
+          <div className="absolute inset-0  bg-gray-300 animate-pulse" />
         )
       )}
 
@@ -120,11 +120,10 @@ export default function PerformedImage({
 
       {/* Error fallback */}
       {errored && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-base-200 text-sm opacity-70">
-          Image failed to load
+        <div className="absolute h-48 w-full  flex flex-col items-center justify-center bg-base-200 text-sm opacity-70">
           <div className="flex">
             <span role="img" aria-label="broken image" className="ml-1">⚠️</span>
-            <p>{alt}</p>
+            <p>Image failed to load</p>
             </div>
           
         </div>
