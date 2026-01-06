@@ -1,5 +1,5 @@
 import React from 'react'
-
+//todo: make as a menu option category when hover or click to show smothly the options
 const CategorySelector = ({category, onCategoryChange}) => {
     const categories = [
         {id: 'general', name: 'General'},

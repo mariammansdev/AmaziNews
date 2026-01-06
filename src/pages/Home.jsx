@@ -6,6 +6,8 @@ import NewsList from '../components/NewsList';
 import { BsSunFill, BsMoonFill } from 'react-icons/bs';
 import Pagination from '../components/Pagination';
 
+//todo: move category to current or additional navbar
+//todo: add other api options like country selection
 const Home = () => {
     const getThemeFromLocalStorage = () => {
         return localStorage.getItem('theme') || themes.fantasy;

@@ -104,7 +104,7 @@ export default function PerformedImage({
           fetchpriority={eager ? "high" : "low"}
           onClick={onClick}
           className={clsx(
-            // "absolute inset-0 w-full h-full",
+            "absolute w-full",
             cover ? "object-cover" : "object-contain"
             ,
             (
@@ -120,7 +120,7 @@ export default function PerformedImage({
 
       {/* Error fallback */}
       {errored && (
-        <div className="absolute h-48 w-full  flex flex-col items-center justify-center bg-base-200 text-sm opacity-70">
+        <div className="absolute h-80 w-full  flex flex-col items-center justify-center bg-base-200 text-sm opacity-70">
           <div className="flex">
             <span role="img" aria-label="broken image" className="ml-1">⚠️</span>
             <p>Image failed to load</p>
