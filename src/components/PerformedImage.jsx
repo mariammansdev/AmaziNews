@@ -55,9 +55,9 @@ export default function PerformedImage({
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setAspectRatio(2 / 3);
+        setAspectRatio(3 / 1);
       } else {
-        setAspectRatio(4 / 3);
+        setAspectRatio(4 / 2);
       }
     };
 

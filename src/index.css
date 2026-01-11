@@ -7,3 +7,30 @@
 @utility sg-stable {
   scrollbar-gutter: stable;
 }
+
+/* Default curtain duration (can be overridden per-card) */
+:root { --curtain-duration: 5s; }
+
+/* Curtain-open animation for cards */
+.curtain-container {
+  position: relative;
+  overflow: hidden;
+}
+.curtain-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(245,245,245,0.95));
+  z-index: 40;
+  transform-origin: top;
+  animation: curtain-open var(--curtain-duration) ease forwards;
+  pointer-events: none;
+}
+
+@keyframes curtain-open {
+  from { height: 100%; }
+  to   { height: 0%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curtain-overlay { animation: none; display: none; }
+}
